@@ -18,8 +18,8 @@ Melvyn Salvatierra ,Giovanni Moscato, Alex Marine, Ryon Cook
 
 **About our project**
 
-###STACK:
-- Front-End / Client : ReactJS [ProjectGoal](#ProjectGoal)
+### STACK:
+- Front-End / Client : ReactJS 
 - Back-End / Server : NodeJS
 - Database: Mongo DB
 - Back-End 2nd framework: ExpressJS
