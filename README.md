@@ -26,6 +26,8 @@ Melvyn Salvatierra ,Giovanni Moscato, Alex Marine, Ryon Cook
 
 Links--------------------------------------------------------------------------------------
 [MERN](https://www.educative.io/edpresso/what-is-mern-stack)
+[YoutubeSetup](https://www.youtube.com/watch?v=7CqJlxBYj-M&list=WL&index=2&t=0s)
+[MongoDBAtlas](https://account.mongodb.com/account/register)
 
 
 **Use Case Model**
@@ -69,7 +71,6 @@ NPM: Is the node package manager and is very usefull unless you want to write yo
 
 [NPMInstall](https://www.npmjs.com/)
 
-We might need this too , not sure yet [Pivitol](https://run.pivotal.io/)
 
 
 
@@ -81,6 +82,26 @@ We might need this too , not sure yet [Pivitol](https://run.pivotal.io/)
 
 # Setup
 
+If you need more detail refer to this youtube video [Setup](https://www.youtube.com/watch?v=7CqJlxBYj-M&list=WL&index=2&t=0s)
+
+Step1: Go here [MongoDBAtlas](https://account.mongodb.com/account/register)
+       Create an account and I'll add you to our Team4B cluster
+
+Step2: Open VS code [VSCode](https://code.visualstudio.com/)
+Open a terminal at the top, then enter node -v
+
+He doesnt really explain what to do here if you dont have node.js installed. So basically you just go to Node.js .com and install thier crap 
+
+* Make sure to auto install python and other junk through "Chocolatey" There is a button to check that does it for you.
+
+Then basically it will install crap and most importantly NPM onto your machine via powershell.
+
+Now run node -v again in VS code and you should get v12.18.3
+
+Step3: Write in VScode on the terminal command line : npx create-react-app mern-Team4B
+
+
+       
 
 
 
