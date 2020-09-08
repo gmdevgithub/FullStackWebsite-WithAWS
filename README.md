@@ -98,7 +98,17 @@ Then basically it will install crap and most importantly NPM onto your machine v
 
 Now run node -v again in VS code and you should get v12.18.3
 
-Step3: Write in VScode on the terminal command line : npx create-react-app mern-Team4B
+Step3: 
+
+run this line: npm i -g yarn
+
+Then run this if your computer blocks scripts: Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Then : npm update
+
+and finally : cd ( your directory on your computer ) 
+              yarn start
+              
 
 
        
