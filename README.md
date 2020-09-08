@@ -109,6 +109,9 @@ Then : npm update
 and finally : cd ( your directory on your computer ) 
               yarn start
               
+To stop the webserver: ^C
+
+Step4: run this line: yarn add gh-pages
 
 
        
