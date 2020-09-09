@@ -66,22 +66,32 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 
 # overallpicture
-[overallpicture](https://www.mongodb.com/mern-stack)
+
+[Overallpicture](https://www.mongodb.com/mern-stack)
 
 [Diagram](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png)
 
+
+
 # Stack
+
+[BurgerStack](https://www.thesoftwareguild.com/blog/build-your-own-technology-stack/)
+
+[Diagram](https://coggle.it/diagram/V7jWVHrkbbVB-0OZ/t/full-stack-web-developer)
 
 
 # Framework
 
+[Video](https://www.youtube.com/watch?v=gq4S-ovWVlM)
+
 
 # FrontEnd
 
+[Front & Backend](https://blog.hyperiondev.com/index.php/2019/04/17/infographic-front-end-vs-back-end-web-development/)
 
 # BackEnd
 
-
+[Front & Backend](https://blog.hyperiondev.com/index.php/2019/04/17/infographic-front-end-vs-back-end-web-development/)
 
 # Git
 
