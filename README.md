@@ -8,7 +8,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 ## Menu
 **Whats the overall picture???**
-- What is a overall picture? [overall picture](#overall picture)
+- What is a overall picture? [overallpicture](#overallpicture)
 
 
 **Full Stack**
