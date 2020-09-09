@@ -7,8 +7,6 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 
 ## Menu
-
-
 **Whats the overall picture???**
 - What is a overall picture? [overall picture](#overall picture)
 
@@ -22,7 +20,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 **Git**
 - What is git/github? [Git](#Git)
-  - What is a README.md
+  - What is a README.md [README.md](#README.md)
   
 
 
@@ -47,7 +45,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 
 
-**Servers, Routers, API **
+**Servers, Routers, API**
 - What is Server? [Server](#Server)
 - What is a Router? [Router](#Router)
 - What is Nodemon? [Nodemon](#Nodemon)
@@ -64,6 +62,85 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 ***********************************************************************************************************************************************
  
+
+
+
+# overall picture
+[overall picture](https://www.mongodb.com/mern-stack)
+
+[Diagram](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png)
+
+# Stack
+
+
+# Framework
+
+
+# FrontEnd
+
+
+# BackEnd
+
+
+
+# Git
+
+
+# README.md
+  
+
+
+
+# React
+
+
+# JSX
+
+
+# NPM
+
+  
+
+
+
+
+# MongoDB
+
+
+# Express
+
+
+# Mongoose
+
+
+# Documents
+
+
+
+
+# Node.js
+
+
+
+
+# Server
+
+
+# Router
+
+
+# Nodemon
+
+
+
+# Java
+
+
+# JavaScript
+
+
+# JSON
+
 
 
 
