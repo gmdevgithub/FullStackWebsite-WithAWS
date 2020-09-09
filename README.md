@@ -65,8 +65,8 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 
 
-# overall picture
-[overall picture](https://www.mongodb.com/mern-stack)
+# overallpicture
+[overallpicture](https://www.mongodb.com/mern-stack)
 
 [Diagram](https://webassets.mongodb.com/_com_assets/cms/mern-stack-b9q1kbudz0.png)
 
