@@ -94,6 +94,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 [Front & Backend](https://blog.hyperiondev.com/index.php/2019/04/17/infographic-front-end-vs-back-end-web-development/)
 
 
+
 # Git
 
 ![How Source controll wokrs](https://livablesoftware.com/wp-content/uploads/2017/11/github-process-english.png)
@@ -105,10 +106,10 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 
 
+
 # React
 
 [How React works]( https://www.edureka.co/blog/what-is-react/)
-
 
 
 
@@ -116,28 +117,37 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 ![JSX](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/jsx-2.png)
 
+
 # NPM
+
+
 
   
 
 
-
-
 # MongoDB
+
+![MongoDB](https://pics.rickosborne.org/blog/wp-content/uploads/2010/02/04205536/SQL-to-MongoDB.png)
 
 
 # Express
 
+![Express](https://binariks.com/wp-content/uploads/2017/11/express-js-840x502.png)
+
 
 # Mongoose
+
+![Mongoose](https://cdn-media-1.freecodecamp.org/images/0*b5piDNW1dqlkJWKe.)
 
 
 # Documents
 
-
+![Doc](https://docs.mongodb.com/manual/_images/crud-annotated-document.bakedsvg.svg)
 
 
 # Node.js
+
+![Node](https://i.stack.imgur.com/sRU4s.png)
 
 
 
