@@ -94,18 +94,22 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 [Front & Backend](https://blog.hyperiondev.com/index.php/2019/04/17/infographic-front-end-vs-back-end-web-development/)
 
 # Git
-
+[How Source controll works](https://livablesoftware.com/development-process-in-github-basic-infographic/)
 
 # README.md
-  
+
+[How Source controll works]( https://www.makeareadme.com/ )
 
 
 
 # React
 
+[How Source controll works]( https://www.edureka.co/blog/what-is-react/)
+
 
 # JSX
 
+![JSX](https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2017/08/jsx-2.png)
 
 # NPM
 
