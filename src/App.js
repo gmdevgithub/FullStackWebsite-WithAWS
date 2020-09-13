@@ -1,8 +1,8 @@
 
 //Basic imports
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from './assets/logo.svg';
+import './css/App.css';
 
 
 
@@ -20,9 +20,11 @@ import {
   Link
 } from "react-router-dom";
 
-
-import HomePage from "./HomePage.js";
-import Users from "./Users.js";
+//Components to render 
+import HomePage from "./components/HomePage.js";
+import Users from "./components/Users.js";
+import Header from "./components/Header.js";
+import Footer from "./components/Footer.js";
 
 
 
@@ -34,11 +36,14 @@ function App() {
 
       <Router>
 
-        
+        <Header />
+
           <br />
           
           <Route path='/' exact component={HomePage} />
           <Route path='/users' exact component={Users} />
+
+        <Footer />
 
       
       </Router>
