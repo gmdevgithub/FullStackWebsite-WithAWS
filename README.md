@@ -9,6 +9,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 ## Menu
 **Whats the overall picture???**
 - What is a overall picture? [overallpicture](#overallpicture)
+- Use Case? [UseCaseVideo](https://www.youtube.com/watch?v=zid-MVo7M-E)
 
 
 **Full Stack**
