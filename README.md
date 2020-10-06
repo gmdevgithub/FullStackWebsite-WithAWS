@@ -11,6 +11,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 - What is a overall picture? [overallpicture](#overallpicture)
 - Use Case? [UseCaseVideo](https://www.youtube.com/watch?v=zid-MVo7M-E)
   - Use lucidchart to make our use case [UseCaseDiagram](https://app.lucidchart.com/lucidchart/b65a79fa-029c-46a0-8e93-76800fcbe1df/edit?beaconFlowId=C710D205E5EEEBC9&page=.Q4MUjXso07N#?folder_id=home&browser=icon)
+- UML sequence diagrams [UMLS](https://www.youtube.com/watch?v=pCK6prSq8aw)
 
 
 **Full Stack**
@@ -23,6 +24,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 **Git**
 - What is git/github? [Git](#Git)
   - What is a README.md [README.md](#README.md)
+
   
 
 
