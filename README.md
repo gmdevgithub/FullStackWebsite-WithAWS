@@ -6,7 +6,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 # How to run the servers / issue fixes 
 1: make sure you're in your projects main directory and type *git pull* to get the latest branch updates
-   Run the command *npm start* this should start a dev server that will pop up in your browser.
+   Run the command "*npm start*" this should start a dev server that will pop up in your browser.
    Issues: make sure you have the updated branch. If NPM START fails run these commands in order:
 ***
 ##   *npm update*
@@ -19,7 +19,7 @@ Based on which issue comes up
 ***
 2: Then open a new terminal and change to the /backend directory 
 ***
-3: Run this command *nodemon server* and look for a success message 
+3: Run this command "*nodemon server*" and look for a success message 
 ***
 4: DO NOT CLOSE EITHER server when testing for full functionality 
 ***
