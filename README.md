@@ -9,12 +9,14 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
    Run the command *npm start* this should start a dev server that will pop up in your browser.
    Issues: make sure you have the updated branch. If NPM START fails run these commands in order:
 ***
-   *npm update*
-   *npm install*
-   *npm i -g react-scripts*
-   *npm install*
-   *yarn add react-refresh eslint-config-react-app*
-   Based on which issue comes up 
+##   *npm update*
+##   *npm install*
+##   *npm i -g react-scripts*
+##   *npm install*
+##   *yarn add react-refresh eslint-config-react-app*
+
+Based on which issue comes up 
+***
 2: Then open a new terminal and change to the /backend directory 
 ***
 3: Run this command *nodemon server* and look for a success message 
