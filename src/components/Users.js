@@ -5,7 +5,8 @@ import axios from 'axios';
 import logo from '../assets/logo.svg';
 import '../css/App.css';
 import '../css/Crack.css';
-import Gio from "../assets/Gio.png"
+import Gio from "../assets/Gio.png";
+
 
 
 
@@ -19,7 +20,7 @@ import { DesktopWindowsRounded } from '@material-ui/icons';
 
 export default class Users extends Component {
 
-
+    //CUSTOM DB 
     //Convert to Hook later 
     constructor(props) 
     {
@@ -27,6 +28,7 @@ export default class Users extends Component {
         
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
+      
 
             this.state = {
                 username: ' ',
@@ -36,7 +38,6 @@ export default class Users extends Component {
         
     }
 
-   
     //Change to hook
     onChangeUsername(e)
     {
@@ -46,8 +47,7 @@ export default class Users extends Component {
         });
     }
 
-
-       //Change to hook
+    //Change to hook
     onSubmit(e)
     {
         e.preventDefault();
@@ -69,18 +69,112 @@ export default class Users extends Component {
 
     }
 
+    //Java HANDLERS
+    handleGET = async e =>
+    {
+
+    }
+
+    
+    handleSUBMIT = async e =>
+    {
+        e.preventDefault();
+
+        console.log("Working button ");
+
+        const url = "http://blitz.cs.niu.edu/csci467/";
+
+        axios.get(url, 
+            { 
+                responseType: 'application/json'
+            })
+        .then(res => console.log(res.data))
+        .catch( err => console.log(err));
+
+        
+
+        
+    }
+   
+
+
+
+
+    // MAIN RENDER 
     render(){
 
     return (
 
+         
+
         <div className="App">
-            <h1 color = "red" >BRUH</h1>
 
-            <header className="App-header">
-                     <img src={Gio} className="App-logo" alt="logo" />
-            </header>
+            <h1> Page 2 </h1>
 
-            <div>
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 200 } } />
+
+  
+         
+
+            {/* For list customers  */}
+            <div 
+            className ="get_Cust"
+            >
+                <h3> Get all customer data </h3>
+                
+                    <button
+                     id ="submit" 
+                     class="btn btn-light"
+                     onClick={this.handleSUBMIT}
+                    > 
+
+                     GET 
+
+                     </button>
+                   
+            </div>
+
+
+            <table class="table table-dark">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+                {/* Spacer  */}
+                <div class="container-fluid" style={ { margin: 500 } } />
+          
+
+            {/* Custom  */}
+            {/* <div>
                 <h3> Create new user</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className = "form-group">
@@ -100,7 +194,10 @@ export default class Users extends Component {
                     </div>
                     
                 </form>
-            </div>
+            </div> */}
+
+            
+
         </div>
         
     )

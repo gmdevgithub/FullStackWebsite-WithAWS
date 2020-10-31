@@ -42,7 +42,7 @@ function App() {
           
           <Route path='/' exact component={HomePage} />
           <Route path='/users' exact component={Users} />
-
+         
         <Footer />
 
       

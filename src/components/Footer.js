@@ -12,14 +12,14 @@ const useStyles = makeStyles(() => ({
 const Footer = () => {
   const classes = useStyles();
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="transparent">
       <Toolbar>
 
 
 
         <Typography className={classes.typographyStyles} 
         style = {{ 
-            color: "Yellow" ,
+            color: "#80FFDB" ,
             textAlign: "center"
             }}>
           Buy our cracks

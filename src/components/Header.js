@@ -18,6 +18,7 @@ const useStyles = makeStyles(() => (
 {
     typographyStyles:
     {
+
     flex: 1
 
   
@@ -33,7 +34,7 @@ const Header = () => {
 
   return (
 
-    <AppBar position="static">
+    <AppBar position="static" color= "transparent">
       <Toolbar>
 
 
@@ -41,10 +42,10 @@ const Header = () => {
       
         <Typography className={classes.typographyStyles}
         style = {{ 
-            color: "Yellow" ,
+            color: "#80FFDB" ,
             fontWeight: "bold"
             }}>
-          Crack Shop 
+          Home
         </Typography>
           
       </Link>
@@ -54,7 +55,7 @@ const Header = () => {
             
         <Typography className={classes.typographyStyles}
         style = {{ 
-            color: "Yellow" ,
+            color: "#80FFDB" ,
             fontWeight: "bold",
             textAlign: "center"
         }}>

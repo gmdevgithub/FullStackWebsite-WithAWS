@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: #7400B8;
+  color: #72EFDD;
 }
 
 .App-logo {
@@ -35,4 +37,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.get_Cust{
+
+ border: 3px dotted #6930C3;
+
+ 
+
 }
