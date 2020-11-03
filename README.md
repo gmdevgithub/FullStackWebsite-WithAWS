@@ -5,11 +5,17 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 ***********************************************************************************************************************************************
 # How to install express and get backendAWS set up
 1: If there is not already a backendAWS folder made , make one and CD into it
+
 2: Run the command *"npm init"* and hit enter a bunch of times
+
 3: Run the command *"npm i express --save"* and this will generate your NODE MODULES for you and PACKAGE JSON
+
 4: You can pretty much follow this video 
+
 [VideoForBackend](https://www.youtube.com/watch?v=kJA9rDX7azM)
+
 5: If you're ever majorly confused , in VS code right click, GO TO TYPE DEFINITION and see more. 
+
 6: Install nodemon and run nodemon app.js if you want it to auto update 
 
 
