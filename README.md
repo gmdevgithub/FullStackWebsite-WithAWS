@@ -18,6 +18,8 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 6: Install nodemon and run nodemon app.js if you want it to auto update 
 
+7: Run *"npm install mysql"* 
+
 
 # How to run the servers / issue fixes 
 1: make sure you're in your projects main directory and type *git pull* to get the latest branch updates
