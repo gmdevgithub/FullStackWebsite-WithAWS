@@ -111,6 +111,27 @@ Based on which issue comes up
 # FrontEnd
 
 [Front & Backend](https://blog.hyperiondev.com/index.php/2019/04/17/infographic-front-end-vs-back-end-web-development/)
+So basically we have a sepereate folder for the frontend. Our front end was created with REACT which is a JS library specifically for user interfaces ( client side ). 
+
+It's broken down like this
+- Frontend
+   - node_modules
+     These are just different libraries that are used by express/node/react during compile time.
+   - public
+     This is the main page that is rendered by REACT, all other pages/components are rendered through the DOM by "root"
+   - src
+     This is where your "source" files go, the components that control/design the user interface
+    - assets
+     Any "assets" such as pictures, videos , gifs, extr go here 
+    - components
+     Any custom made components/premade go here 
+    - css
+     All css MAIN styling goes here that is not inline 
+    - app, index, testing
+     Index.js will render our main component < App />
+     * App.js will route to our other components via a URL link
+     App.test.js will UNIT test our routing component
+# IGNORE THE OTHER FILES FOR NOW
 
 # BackEnd
 
