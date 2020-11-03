@@ -118,13 +118,13 @@ It's broken down like this
    - node_modules: These are just different libraries that are used by express/node/react during compile time.
    - public: This is the main page that is rendered by REACT, all other pages/components are rendered through the DOM by "root"
    - src: This is where your "source" files go, the components that control/design the user interface
-         - assets: Any "assets" such as pictures, videos , gifs, extr go here 
-         - components: Any custom made components/premade go here 
-         - css: All css MAIN styling goes here that is not inline 
-         - app, index, testing:
-           * Index.js will render our main component < App />
-           * App.js will route to our other components via a URL link
-           * App.test.js will UNIT test our routing component
+     - assets: Any "assets" such as pictures, videos , gifs, extr go here 
+     - components: Any custom made components/premade go here 
+     - css: All css MAIN styling goes here that is not inline 
+     - app, index, testing:
+       * Index.js will render our main component < App />
+       * App.js will route to our other components via a URL link
+       * App.test.js will UNIT test our routing component
 # IGNORE THE OTHER FILES FOR NOW
 
 # BackEnd
