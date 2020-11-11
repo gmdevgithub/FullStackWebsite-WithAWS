@@ -1,6 +1,6 @@
 # CSCI467-Team4B
 
-Gio is gay but thats okay :)
+Gio is gay but thats okay :) poop
 
  YOO
 
