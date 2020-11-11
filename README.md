@@ -1,5 +1,7 @@
 # CSCI467-Team4B
 
+ YOO
+
 This project uses the MERN stack to develop an ecommerce store with a frontend, backend, and database
 
 ***********************************************************************************************************************************************
