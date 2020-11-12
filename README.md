@@ -1,12 +1,5 @@
 # CSCI467-Team4B
 
-Gio is gay but thats okay :) poop
-
-Jimbo is here to stay
-
- YOO
-
-
 This project uses the MERN stack to develop an ecommerce store with a frontend, backend, and database
 
 ***********************************************************************************************************************************************
@@ -48,6 +41,8 @@ Based on which issue comes up
 4: DO NOT CLOSE EITHER server when testing for full functionality 
 ***
 5: TO CLOSE servers simply type the command control + *C*
+
+# NOTE: Tons of issues we had were because we were not in the correct directory OR because of package lock json. Delete the package lock file and then run the command npm install to fix this issue temporarily. The correct way is given here https://stackoverflow.com/questions/44206782/do-i-commit-the-package-lock-json-file-created-by-npm-5 .
 
 ## Menu
 **Whats the overall picture???**
