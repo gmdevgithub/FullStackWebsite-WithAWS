@@ -14,7 +14,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 [VideoForBackend](https://www.youtube.com/watch?v=kJA9rDX7azM)
 
-5: If you're ever majorly confused , in VS code right click, GO TO TYPE DEFINITION and see more. 
+# 5: If you're ever majorly confused , in VS code right click, GO TO TYPE DEFINITION and see more. 
 
 6: Install nodemon and run nodemon app.js if you want it to auto update 
 
