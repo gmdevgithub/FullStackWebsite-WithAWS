@@ -2,6 +2,7 @@
 
 var mysql = require('mysql')
 
+
 // Example http:blitz.........
 var connection = mysql.createConnection(
     {
@@ -16,6 +17,7 @@ var connection = mysql.createConnection(
 
 var conn = false;
 
+
 connection.connect(function(err){
     if (err){
         conn=false;
@@ -26,6 +28,7 @@ connection.connect(function(err){
     console.log('connected to legacy db');
    
 });
+
 
 
 let statment = 'SELECT * FROM customers';
@@ -41,7 +44,7 @@ connection.query(statment, (err, results, fields) =>
         return console.error(err.message);
     }
 
-    console.log(results[0])
+    console.log(results)
 
 });
     

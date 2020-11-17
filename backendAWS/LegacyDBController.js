@@ -1,6 +1,10 @@
 let connection = require('../backendAWS/Legacyconnection.js');
 //let aws = require("../awsConnection");
 
+
+
+
+
 exports.getallparts = function(req , res) 
 {
     let statment = 'SELECT * FROM Name';
@@ -17,6 +21,7 @@ exports.getallparts = function(req , res)
     });
     
 };
+
 
 exports.onepart = function (req,res){
     let statment = `SELECT * FROM parts WHERE number = ${req.body.number}`

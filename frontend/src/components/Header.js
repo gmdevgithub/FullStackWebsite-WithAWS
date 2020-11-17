@@ -37,19 +37,23 @@ const Header = () => {
     <AppBar position="static" color= "transparent">
       <Toolbar>
 
+        
 
-      <Link to="/" style={{ marginRight: 8 }}>
-      
-        <Typography className={classes.typographyStyles}
-        style = {{ 
-            color: "#80FFDB" ,
-            fontWeight: "bold"
+
+        <Link to="/" style={{ marginRight: 8 }}>
+
+          <Typography className={classes.typographyStyles}
+            style={{
+              color: "#80FFDB",
+              fontWeight: "bold"
             }}>
-          Home
+            Home
         </Typography>
-          
-      </Link>
-      
+
+        </Link>
+
+
+    
 
         <Link to="/users" style={{ marginRight: 10 , marginLeft: 30}}>
             
