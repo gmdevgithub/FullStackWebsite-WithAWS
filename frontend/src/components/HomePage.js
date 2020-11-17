@@ -6,15 +6,14 @@ import '../css/App.css';
 import '../css/Crack.css';
 
 
-
-
 //Imports for bootstrap css styling 
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
 import { Grid } from "@material-ui/core";
-
 import Crack from "../assets/Crack.png"
+
+
+
+
 
 
 
@@ -25,6 +24,9 @@ const HomePage = () => {
     return (
 
         <div className="App">
+
+        <h1> Hi </h1>
+            
              
         <Grid container direction="column">
 
