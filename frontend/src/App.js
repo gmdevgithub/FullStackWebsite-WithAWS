@@ -30,7 +30,11 @@ import Login from "./components/Login.js";
 
 
 
+
+
 function App() {
+
+
 
  
     return (
@@ -38,18 +42,20 @@ function App() {
       
         <Router>
 
-          <Header />
+
+         
 
           <br />
+          <Route path='/login' exact component={Login} />
+
 
           <Route path='/' exact component={HomePage} />
 
-          
-          <Route path='/login' exact component={Login} />
+
           <Route path='/users' exact component={Users} />
 
-
-          <Footer />
+          
+         
 
 
         </Router>

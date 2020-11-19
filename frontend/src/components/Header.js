@@ -34,8 +34,8 @@ const Header = () => {
 
   return (
 
-    <AppBar position="static" color= "transparent">
-      <Toolbar>
+    <AppBar position="sticky" style = {{  marginTop: "-30px", backgroundColor: "#31c5d8"}}>
+      <Toolbar position="top">
 
         
 

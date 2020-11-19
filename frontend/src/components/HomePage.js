@@ -11,8 +11,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Grid } from "@material-ui/core";
 import Crack from "../assets/Crack.png"
 
-
-
+import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 
 
 
@@ -24,6 +24,8 @@ const HomePage = () => {
     return (
 
         <div className="App">
+        
+        <Header/>
 
         <h1> Hi </h1>
             
@@ -74,7 +76,8 @@ const HomePage = () => {
             </Grid>
         </Grid>
 
-           
+
+        <Footer/>
 
         </div>
 

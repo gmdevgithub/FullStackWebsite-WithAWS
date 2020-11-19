@@ -14,6 +14,8 @@ import Gio from "../assets/Gio.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { DesktopWindowsRounded } from '@material-ui/icons';
 
+import Header from "../components/Header.js";
+import Footer from "../components/Footer.js";
 
 
 
@@ -109,6 +111,11 @@ export default class Users extends Component {
 
         <div className="App">
 
+            <Header/>
+
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 200 } } />
+
             <h1> Page 2 </h1>
 
             {/* Spacer  */}
@@ -196,7 +203,7 @@ export default class Users extends Component {
                 </form>
             </div> */}
 
-            
+        <Footer/>
 
         </div>
         
