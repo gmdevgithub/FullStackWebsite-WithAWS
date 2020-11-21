@@ -27,6 +27,8 @@ import Users from "./components/Users.js";
 import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Login from "./components/Login.js";
+import Error from "./components/Errorpage.js";
+import {Protectedroute} from "./components/Protectedroute.js";
 
 
 
@@ -49,10 +51,12 @@ function App() {
           <Route path='/login' exact component={Login} />
 
 
-          <Route path='/' exact component={HomePage} />
+          <Protectedroute path='/' exact component={HomePage} />
 
 
           <Route path='/users' exact component={Users} />
+
+          <Route path='/error' exact component={Error} />
 
           
          

@@ -102,7 +102,7 @@ const Login = props => {
                 <h4>Plant Repair Services<br/> <br/> Sales Associate System <br/> <br/> LOGIN</h4>
             </div>
             
-            <FormControl  >
+            <FormControl>
 
                 <FormHelperText 
                 style = {{ color: "white" }} 

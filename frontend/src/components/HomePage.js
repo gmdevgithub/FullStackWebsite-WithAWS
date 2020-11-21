@@ -21,6 +21,8 @@ import Footer from "../components/Footer.js";
 
 const HomePage = () => {
 
+    
+
     return (
 
         <div className="App">
