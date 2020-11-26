@@ -9,10 +9,22 @@ import '../css/Crack.css';
 //Imports for bootstrap css styling 
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Grid } from "@material-ui/core";
+import Typography from '@material-ui/core/Typography';
 import Crack from "../assets/Crack.png"
 
 import Header from "../components/Header.js";
 import Footer from "../components/Footer.js";
+
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles({
+  root: {
+    color: 'purple',
+    textAlign: "center",
+    
+
+  },
+});
 
 
 
@@ -21,7 +33,7 @@ import Footer from "../components/Footer.js";
 
 const HomePage = () => {
 
-    
+    const classes = useStyles();
 
     return (
 
@@ -29,60 +41,37 @@ const HomePage = () => {
         
         <Header/>
 
-        <h1> Hi </h1>
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 60 } } />
+
             
              
-        <Grid container direction="column">
-
-            <Grid item>
-                <h1>Our Crack is grade A and can be made in 
-                milliseconds
+       
+                <h1>Welcome to the plant repair services associate & admin system
                  </h1>
-            </Grid>
+            
 
-            <Grid item container>
+            
 
-                {/** Gutter */}
-                <Grid item xs={false} sm={2} />
+             {/* Spacer  */}
+             <div class="container-fluid" style={ { margin: 60 } } />
 
-                <Grid item xs={4} sm={2}>
-                  <header className="App-header">
-                     <img src={logo} className="App-logo" alt="logo" />
-                  </header>
-                </Grid>
-
-                <Grid item xs={4} sm={4}>
-                  <header className="App-header">
-                     <img src={Crack} className="Crack-logo" alt="logo" />
-                  </header>
-                </Grid>
-
-                <Grid item xs={4} sm={2}>
-                  <header className="App-header">
-                     <img src={logo} className="App-logo" alt="logo" />
-                  </header>
-                </Grid>
-                
                
-             
+           
+                    <Typography className = {classes.root} variant="h5" gutterBottom>
+                        If you need to fufil a quote or purchase order please 
+                        head to the SalesAssociate page
+                    </Typography>
+          
 
-                {/** Gutter */}
-                <Grid item xs={false} sm={2} />
-
-            </Grid>
-
-            <Grid item>
-                <h1>Checkout our second page for even more 
-                    cracks
-                </h1>
-            </Grid>
-        </Grid>
+             {/* Spacer  */}
+             <div class="container-fluid" style={ { margin: 100 } } />
 
 
         <Footer/>
 
         </div>
-
+      
        
     )
 

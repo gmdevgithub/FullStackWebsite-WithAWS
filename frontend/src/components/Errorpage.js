@@ -16,16 +16,7 @@ const useStyles2 = makeStyles(
     {
         root:
         {
-            background: 'linear-gradient(165deg, #80ffdb 10%, #48bfe3 90%)',
-            border: 50,
-            borderRadius: 3,
-            boxShadow: '2px 2px 170px 20px #6930c3',
-            color: 'black',
-            height: 50,
-            padding: '0 30px',
-            width: 400,
-            '&:hover': {
-                backgroundColor: "black",
+            backgroundColor: "black",
                 background: "black",
                 //border: 50,
                 borderRadius: 3,
@@ -34,6 +25,20 @@ const useStyles2 = makeStyles(
                 height: 50,
                 padding: '0 30px',
                 width: 400,
+            
+            '&:hover': {
+                
+
+
+
+                background: 'linear-gradient(165deg, #80ffdb 10%, #48bfe3 90%)',
+            border: 50,
+            borderRadius: 3,
+            boxShadow: '2px 2px 170px 20px #6930c3',
+            color: 'black',
+            height: 50,
+            padding: '0 30px',
+            width: 400,
             },
             form: {
                 '& .MuiTextField-root': {

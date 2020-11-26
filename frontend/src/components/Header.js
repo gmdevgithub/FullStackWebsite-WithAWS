@@ -37,27 +37,33 @@ const useStyles = makeStyles(() => (
 
 const useStyles2 = makeStyles(
   {
-      root:
-      {
-          background: 'linear-gradient(165deg, #80ffdb 10%, #48bfe3 90%)',
-          border: 50,
-          borderRadius: 3,
-          boxShadow: '2px 2px 170px 20px #6930c3',
-          color: 'black',
-          height: 50,
-          padding: '0 30px',
-          width: 400,
-          '&:hover': {
-              backgroundColor: "black",
-              background: "black",
-              //border: 50,
-              borderRadius: 3,
-              boxShadow: '0 0px 0px 0px #80ffdb',
-              color: 'white',
-              height: 50,
-              padding: '0 30px',
-              width: 400,
-          },
+    root:
+    {
+      backgroundColor: "black",
+      background: "black",
+      //border: 50,
+      borderRadius: 3,
+      boxShadow: '0 0px 0px 0px #80ffdb',
+      color: 'white',
+      height: 50,
+      padding: '0 30px',
+      width: 400,
+
+      '&:hover': {
+
+
+
+
+
+        background: 'linear-gradient(165deg, #80ffdb 10%, #48bfe3 90%)',
+        border: 50,
+        borderRadius: 3,
+        boxShadow: '2px 2px 170px 20px #6930c3',
+        color: 'black',
+        height: 50,
+        padding: '0 30px',
+        width: 400,
+      },
           form: {
               '& .MuiTextField-root': {
                   width: 200,
@@ -82,7 +88,7 @@ const Header = props => {
 
   return (
 
-    <AppBar position="sticky" style = {{  marginTop: "-30px", backgroundColor: "#31c5d8"}}>
+    <AppBar position="sticky" style = {{  marginTop: "-30px", backgroundColor: "#0c0c0c"}}>
       <Toolbar position="top">
 
         
@@ -103,7 +109,7 @@ const Header = props => {
 
     
 
-        <Link to="/users" style={{ marginRight: 10 , marginLeft: 30}}>
+        <Link to="/SalesDash" style={{ marginRight: 10 , marginLeft: 30}}>
             
         <Typography className={classes.typographyStyles}
         style = {{ 
@@ -111,19 +117,32 @@ const Header = props => {
             fontWeight: "bold",
             textAlign: "center"
         }}>
-          Page 2
+          SalesAssociate
         </Typography>
 
         </Link>
 
+
+
+
+        <Link to="/SalesAdminDash" style={{ marginRight: 10 , marginLeft: 30}}>
+            
+        <Typography className={classes.typographyStyles}
+        style = {{ 
+            color: "#80FFDB" ,
+            fontWeight: "bold",
+            textAlign: "center"
+        }}>
+         SalesAdmin
+        </Typography>
+
+        </Link>
         
       
 
         
 
-        <ShoppingCartIcon style={{ marginRight: 10 , marginLeft: 10}}/>
-        <AccessibleIcon style={{ marginRight: 10 , marginLeft: 10}}/>
-
+        
 
         <Button 
             className={classes.root}

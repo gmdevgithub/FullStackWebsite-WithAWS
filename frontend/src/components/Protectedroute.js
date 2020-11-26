@@ -34,18 +34,21 @@ export const Protectedroute = ( {component: Component, ...rest }) =>
                 }
                 else
                 {
-                    return <Redirect to = {
+
+                    return <Component {...props} />
+                    
+                    {/* return <Redirect to = {
                     {
                     
-                        pathname: "/users",
+                        pathname: "/error",
                         state:
                         {
                             from: props.location
                         }
                     
-                    }
+                    } 
 
-                    } />
+                    } /> */}
                 }
 
         }}

@@ -14,13 +14,13 @@ import Gio from "../assets/Gio.png";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { DesktopWindowsRounded } from '@material-ui/icons';
 
-import Header from "../components/Header.js";
-import Footer from "../components/Footer.js";
+import Header from "./Header.js";
+import Footer from "./Footer.js";
 
 
 
 
-export default class Users extends Component {
+export default class SalesDash extends Component {
 
     //CUSTOM DB 
     //Convert to Hook later 
@@ -116,7 +116,7 @@ export default class Users extends Component {
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 200 } } />
 
-            <h1> Page 2 </h1>
+            <h1> Sales Associate</h1>
 
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 200 } } />
