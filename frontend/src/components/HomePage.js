@@ -4,6 +4,7 @@ import React from 'react';
 import logo from '../assets/logo.svg';
 import '../css/App.css';
 import '../css/Crack.css';
+import '../css/homepage.css';
 
 
 //Imports for bootstrap css styling 
@@ -19,8 +20,9 @@ import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles({
   root: {
-    color: 'purple',
+    color: '#72EFDD',
     textAlign: "center",
+    textShadow: "2px 2px black"
     
 
   },
@@ -40,14 +42,18 @@ const HomePage = () => {
         <div className="App">
         
         <Header/>
-
+        
+        <div className="homepage">
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 60 } } />
 
             
              
        
-                <h1>Welcome to the plant repair services associate & admin system
+                <h1
+                style={{ fontStyle: "oblique" ,  textShadow: "5px 2px #ff0000" }}
+
+                >Welcome to the plant repair services associate & admin system
                  </h1>
             
 
@@ -59,7 +65,7 @@ const HomePage = () => {
                
            
                     <Typography className = {classes.root} variant="h5" gutterBottom>
-                        If you need to fufil a quote or purchase order please 
+                        If you need to fufill a quote or purchase order please 
                         head to the SalesAssociate page
                     </Typography>
           
@@ -67,6 +73,7 @@ const HomePage = () => {
              {/* Spacer  */}
              <div class="container-fluid" style={ { margin: 100 } } />
 
+             </div>
 
         <Footer/>
 

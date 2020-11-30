@@ -1,109 +1,189 @@
 
 //Basic imports
 import React, {Component} from 'react';
-import axios from 'axios';
-import logo from '../assets/logo.svg';
-import '../css/App.css';
-import '../css/Crack.css';
-import Gio from "../assets/Gio.png";
+import MaterialTable from 'material-table';
+import { createMuiTheme } from '@material-ui/core/styles';
+
+import emailjs from 'emailjs-com';
+
 
 
 
 
 //Imports for bootstrap css styling 
 import "bootstrap/dist/css/bootstrap.min.css";
-import { DesktopWindowsRounded } from '@material-ui/icons';
+import Icon from '@material-ui/core/Icon';
+import '../css/homepage.css';
 
+//Custom components 
 import Header from "./Header.js";
 import Footer from "./Footer.js";
 
+/* Quote Table:
+Customer Fname
+Customer Lname
+Part number 
+Amount
+Discount
+Notes
+Customer Email */
 
 
 
-export default class SalesDash extends Component {
 
-    //CUSTOM DB 
-    //Convert to Hook later 
-    constructor(props) 
-    {
-        super(props); 
-        
-        this.onChangeUsername = this.onChangeUsername.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
-      
 
-            this.state = {
-                username: ' ',
-        
-               
-            }
-        
-    }
 
-    //Change to hook
-    onChangeUsername(e)
-    {
-        this.setState({
+const SalesDash = (props) => {
 
-            username: e.target.value
-        });
-    }
+    const { useState } = React;
 
-    //Change to hook
-    onSubmit(e)
-    {
+    function sendEmail(e) {
         e.preventDefault();
+    
+        emailjs.sendForm('service_iqx2obn', 'template_ig9u9mb', e.target, 'user_tsBdXLyxdJz05kQ2EPswb')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+          
 
-        const user = {
-            username: this.state.username
-        }
 
-        console.log(user);
-        console.log("User Submitted");
-
-        axios.post('http://localhost:5000/users/add', user)
-        .then(res => console.log(res.data))
+    const [columns, setColumns] = useState([
+        {
+            title: 'name', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'city', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'street', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'contact', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'number', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'price', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'description', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'quote', field: 'quote',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'secretnote', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
+        {
+            title: 'email', field: 'name',
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )
+        },
         
+        
+    ]);
 
-        this.setState({
-            username: ' '
-        })
-
-    }
-
-    //Java HANDLERS
-    handleGET = async e =>
-    {
-
-    }
+    const [data, setData] = useState([
+        { name: 'Gio', quote:'Yes, this is a really really really really really really really realy longgggggggg multiline quote like in the project description' },
+        { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
+    ]);
 
     
-    handleSUBMIT = async e =>
-    {
-        e.preventDefault();
-
-        console.log("Working button ");
-
-        const url = "http://blitz.cs.niu.edu/csci467/";
-
-        axios.get(url, 
-            { 
-                responseType: 'application/json'
-            })
-        .then(res => console.log(res.data))
-        .catch( err => console.log(err));
-
-        
-
-        
-    }
-   
-
-
-
-
-    // MAIN RENDER 
-    render(){
+    const theme = createMuiTheme({
+        palette: {
+          primary: {
+            main: '#4caf50',
+          },
+          secondary: {
+            main: '#ff9100',
+          },
+        },
+        minWidth: 650,
+    
+      });
+  
 
     return (
 
@@ -113,102 +193,184 @@ export default class SalesDash extends Component {
 
             <Header/>
 
+        <div class="salesdash">
             {/* Spacer  */}
-            <div class="container-fluid" style={ { margin: 200 } } />
+            <div class="container-fluid" style={ { margin: 100 } } />
 
-            <h1> Sales Associate</h1>
+            <h1 style= {{ textAlign: "center"}}> Sales Associate Page</h1>
 
             {/* Spacer  */}
-            <div class="container-fluid" style={ { margin: 200 } } />
+            <div class="container-fluid" style={ { margin: 40 } } />
 
-  
+            
+                <form className="contact-form" onSubmit={sendEmail}>
+                    <input type="hidden" name="contact_number" />
+                    <label>Name</label>
+                    <input type="text" name="user_name" />
+                    <label>Email</label>
+                    <input type="email" name="user_email" />
+                    <label>Message</label>
+                    <textarea name="message" />
+                    <input type="submit" value="Send" />
+                </form>
+
+           <div  style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
+           
+           <MaterialTable 
+               style = {{ 
+                   color: "#6930c3" , 
+                   backgroundColor: "black", 
+                   borderColor: "teal",
+                   border: "solid",
+                   height: '500px',
+                   
+                  
+                   
+                }}
+                options={{
+                   actionsColumnIndex: -1,
+                   actionsCellStyle:
+                   {
+                       color: "#72EFDD",
+                       backgroundColor: "black"
+
+                   },
+                   headerStyle:
+                   {
+                    backgroundColor:'black',
+                    color: '#72EFDD',
+
+                   },
+                   rowStyle: 
+                   {
+                   backgroundColor: 'black',
+                   
+                   
+                   },
+                   searchFieldStyle: 
+                   {
+                   
+                  
+                   backgroundColor: '#72EFDD',
+                   border: "solid",
+                   borderColor: "#6930c3",
+                   
+                   },
+                  
+                   }}
+               title="Current quotes"
+               columns={columns}
+               data={data}
+               
+               
+           />
+
+           </div >
+           </div >
+
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 100 } } />
+            
+
+            <div class="salesdash2">
+            <div style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
+           
+            <MaterialTable 
+                style = {{ 
+                    color: "white" , 
+                    backgroundColor: "#6930c3", 
+                    borderColor: "teal",
+                    border: "solid",
+                    height: '500px'
+                   
+                    
+                 }}
+                 options={{
+                    exportButton: true,
+                    exportCsv: (columns, data) => {
+                        sendEmail(data);
+                    },
+                    actionsColumnIndex: -1,
+                    actionsCellStyle:
+                    {
+                        color: "#72EFDD",
+                        backgroundColor: "black"
+
+                    },
+                    headerStyle:
+                    {
+                     backgroundColor:'black',
+                     color: '#72EFDD',
+
+                    },
+                    rowStyle: 
+                    {
+                    backgroundColor: 'black',
+                    
+                    },
+                    searchFieldStyle: 
+                    {
+                    backgroundColor: '#72EFDD',
+                    border: "solid",
+                    borderColor: "black",
+                    
+                    },
+                   
+                    }}
+                title="Add, Edit, Update, Delete"
+                columns={columns}
+                data={data}
+                editable={{
+                    onRowAdd: newData =>
+                        new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                setData([...data, newData]);
+                               
+
+                                resolve();
+                            }, 1000)
+                        }),
+                    onRowUpdate: (newData, oldData) =>
+                        new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                const dataUpdate = [...data];
+                                const index = oldData.tableData.id;
+                                dataUpdate[index] = newData;
+                                setData([...dataUpdate]);
+
+                                resolve();
+                            }, 1000)
+                        }),
+                    onRowDelete: oldData =>
+                        new Promise((resolve, reject) => {
+                            setTimeout(() => {
+                                const dataDelete = [...data];
+                                const index = oldData.tableData.id;
+                                dataDelete.splice(index, 1);
+                                setData([...dataDelete]);
+
+                                resolve();
+                            }, 1000)
+                        }),
+                }}
+            />
+
          
 
-            {/* For list customers  */}
-            <div 
-            className ="get_Cust"
-            >
-                <h3> Get all customer data </h3>
-                
-                    <button
-                     id ="submit" 
-                     class="btn btn-light"
-                     onClick={this.handleSUBMIT}
-                    > 
 
-                     GET 
-
-                     </button>
-                   
-            </div>
-
-
-            <table class="table table-dark">
-                <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                </tbody>
-            </table>
-
-
-
-                {/* Spacer  */}
-                <div class="container-fluid" style={ { margin: 500 } } />
-          
-
-            {/* Custom  */}
-            {/* <div>
-                <h3> Create new user</h3>
-                <form onSubmit={this.onSubmit}>
-                    <div className = "form-group">
-                        <label>Username: </label>
-                        <input type="text"
-                            required
-                            className="form-control"
-                            value={this.state.username}
-                            onChange={this.onChangeUsername}
-                                
-                            />
-                    </div>
-                    <div className = "form-group">
-                        <input type ="submit" value="Create User log" className="btn btn-primary">
-
-                        </input>
-                    </div>
-                    
-                </form>
-            </div> */}
-
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 500 } } />
+           
+        </div>
+        </div>
         <Footer/>
 
         </div>
         
     )
-    }
+    
 
 };
+
+export default SalesDash;
 

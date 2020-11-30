@@ -24,5 +24,5 @@ app.get( '/' , ( req , res ) => // This is an arrow function
 app.listen(port, () => // Special empty param arrow function
 {
     //Just your standard debug console log 
-    console.log(`Example app listening at http://localhost: your a`)
+    console.log(`Example app listening at http://localhost: your a silly goose`)
 });
