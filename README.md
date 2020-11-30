@@ -1,10 +1,6 @@
 # CSCI467-Team4B
 
-Gio is gay but thats okay :) poop
 
-Jimbo is here to stay
-
- YOO
 
 
 This project uses the MERN stack to develop an ecommerce store with a frontend, backend, and database
