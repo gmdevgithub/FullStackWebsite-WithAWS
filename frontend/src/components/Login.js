@@ -63,7 +63,7 @@ const useStyles = makeStyles(
     });
 
 
-    const usestyles2 = makeStyles(
+    const usestyles2 = makeStyles((theme) =>(
         {
             root:
             {
@@ -76,12 +76,22 @@ const useStyles = makeStyles(
                 //padding: '0 30px',
                 width: 400,
                 padding: 10,
-                margin: "dense"
+                margin: "dense",
+                border: "1px solid #7400b8",
+
+                '& .MuiTextField-root': 
+                {
+                    margin: theme.spacing(1),
+                    width: '25ch',
+                    border: "1px solid red",
+                    
+                },
                 
                 
 
             },
-        });
+          
+        }));
 
 
 const Login = props => {
