@@ -10,11 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.6",
-    "ejs": "latest",
-    "aws-sdk": "latest",
-    "express": "latest",
+    "aws-sdk": "^2.802.0",
     "body-parser": "latest",
-    "mysql": "latest"
+    "ejs": "latest",
+    "express": "latest",
+    "mysql": "latest",
+    "nodemon": "^2.0.6"
   }
 }

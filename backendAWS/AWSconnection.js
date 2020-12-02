@@ -131,7 +131,14 @@ connection.query(statment3,  (err, results, fields) =>
 
 
 
-connection.end();
+// Create a MySQL pool
+const pool = mysql.createPool(connection);
+
+// Export the pool
+module.exports = pool;
+
+
+//connection.end();
 
 
 
