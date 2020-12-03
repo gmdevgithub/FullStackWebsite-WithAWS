@@ -1,13 +1,13 @@
 
 //Basic imports
-import React, {Component} from 'react';
+import React, {Component, useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import { createMuiTheme } from '@material-ui/core/styles';
+import axios from 'axios';
+
+
 
 import emailjs from 'emailjs-com';
-
-
-
 
 
 
@@ -31,8 +31,18 @@ Notes
 Customer Email */
 
 
+/* axios.get('http://localhost:8080/getaws')
+  .then((response) => {
+    console.log(response.data);
+    console.log(response.status);
+    console.log(response.statusText);
+    console.log(response.headers);
+    console.log(response.config);
+  }); */
 
 
+
+ 
 
 
 
@@ -50,6 +60,97 @@ const SalesDash = (props) => {
               console.log(error.text);
           });
       }
+
+
+
+    const [entries, setEntries] = useState({
+        data: [
+            {
+                partnumber: "",
+                customernumber: "",
+                firstname: "",
+                city: "",
+                street: "",
+                contact: "",
+                quote: "",
+                price: "",
+                descriptions: "",
+                discount: "",
+                secretnote: "",
+                email: "",
+                sanctioned: ""
+    
+    
+    
+    
+            }
+        ]
+    });
+    
+    const [state] = React.useState({
+        columns: [
+            { title: "partnumber", field: "partnumber" },
+            { title: "customernumber", field: "customernumber" },
+            { title: "firstname", field: "firstname" },
+            { title: "city", field: "city" },
+            { title: "street", field: "street" },
+            { title: "contact", field: "contact" },
+            { title: "quote", field: "quote" },
+            { title: "price", field: "price" },
+            { title: "descriptions", field: "descriptions" },
+            { title: "discount", field: "discount" },
+            { title: "secretnote", field: "secretnote" },
+            { title: "email", field: "email" },
+            { title: "sanctioned", field: "sanctioned" }
+    
+           
+            
+      
+          
+
+           
+        ]
+    });
+    
+    
+    
+    useEffect(() => {
+        axios
+        .get("http://localhost:8080/getaws")
+        .then(response => {
+        let data = [];
+    response.data.forEach(el => {
+        data.push({
+            partnumber: el.partnumber,
+            customernumber: el.customernumber,
+            firstname: el.firstname,
+            city: el.city,
+            street: el.street,
+            contact: el.contact,
+            quote: el.quote,
+            price: el.price,
+            descriptions: el.descriptions,
+            discount: el.discount,
+            secretnote: el.secretnote,
+            email: el.email,
+            sanctioned: ""
+            
+           
+        });
+    });
+    setEntries({ data: data });
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+    }, []);
+
+
+
+
+
+
+    
           
 
 
@@ -168,10 +269,90 @@ const SalesDash = (props) => {
         
     ]);
 
-    const [data, setData] = useState([
-        { name: 'Gio', quote:'Yes, this is a really really really really really really really realy longgggggggg multiline quote like in the project description' },
-        { name: 'Zerya Betül', surname: 'Baran', birthYear: 2017, birthCity: 34 },
-    ]);
+    
+
+
+    const [entries2,setData] = useState({
+        data: [
+            {
+                partnumber: "",
+                customernumber: "",
+                firstname: "",
+                city: "",
+                street: "",
+                contact: "",
+                quote: "",
+                price: "",
+                descriptions: "",
+                discount: "",
+                secretnote: "",
+                email: "",
+                sanctioned: ""
+    
+    
+    
+    
+            }
+        ]
+    });
+    
+    const [state2 ,setEntries2] = React.useState({
+        columns: [
+            { title: "partnumber", field: "partnumber" },
+            { title: "customernumber", field: "customernumber" },
+            { title: "firstname", field: "firstname" },
+            { title: "city", field: "city" },
+            { title: "street", field: "street" },
+            { title: "contact", field: "contact" },
+            { title: "quote", field: "quote" },
+            { title: "price", field: "price" },
+            { title: "descriptions", field: "descriptions" },
+            { title: "discount", field: "discount" },
+            { title: "secretnote", field: "secretnote" },
+            { title: "email", field: "email" },
+            { title: "sanctioned", field: "sanctioned" }
+    
+           
+            
+      
+          
+
+           
+        ]
+    });
+
+
+
+    useEffect(() => {
+        axios
+        .get("http://localhost:8080/getaws")
+        .then(response => {
+        let data = [];
+    response.data.forEach(el => {
+        data.push({
+            partnumber: el.partnumber,
+            customernumber: el.customernumber,
+            firstname: el.firstname,
+            city: el.city,
+            street: el.street,
+            contact: el.contact,
+            quote: el.quote,
+            price: el.price,
+            descriptions: el.descriptions,
+            discount: el.discount,
+            secretnote: el.secretnote,
+            email: el.email,
+            sanctioned: ""
+            
+           
+        });
+    });
+    setData({ data: data });
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+    }, []);
 
     
     const theme = createMuiTheme({
@@ -262,8 +443,8 @@ const SalesDash = (props) => {
                   
                    }}
                title="Current quotes"
-               columns={columns}
-               data={data}
+               columns={state.columns}
+               data={entries.data}
                
                
            />
@@ -321,13 +502,13 @@ const SalesDash = (props) => {
                    
                     }}
                 title="Add, Edit, Update, Delete"
-                columns={columns}
-                data={data}
+                columns={state2.columns}
+                data={entries2.data}
                 editable={{
                     onRowAdd: newData =>
                         new Promise((resolve, reject) => {
                             setTimeout(() => {
-                                setData([...data, newData]);
+                                setData([...entries2.data, newData]);
                                
 
                                 resolve();
@@ -336,7 +517,7 @@ const SalesDash = (props) => {
                     onRowUpdate: (newData, oldData) =>
                         new Promise((resolve, reject) => {
                             setTimeout(() => {
-                                const dataUpdate = [...data];
+                                const dataUpdate = [...entries2.data];
                                 const index = oldData.tableData.id;
                                 dataUpdate[index] = newData;
                                 setData([...dataUpdate]);
@@ -344,17 +525,22 @@ const SalesDash = (props) => {
                                 resolve();
                             }, 1000)
                         }),
-                    onRowDelete: oldData =>
-                        new Promise((resolve, reject) => {
+                        onRowDelete: oldData =>
+                        new Promise(resolve => {
                             setTimeout(() => {
-                                const dataDelete = [...data];
-                                const index = oldData.tableData.id;
-                                dataDelete.splice(index, 1);
-                                setData([...dataDelete]);
-
-                                resolve();
-                            }, 1000)
-                        }),
+                            resolve();
+                            const data = [...entries2.data];
+                            entries2.data.splice(entries2.data.indexOf(oldData), 1);
+                            axios
+                                .delete("http://localhost:8080/getaws", {
+                                    params: {
+                                        partnumber: entries2.data[0].partnumber
+                                    }
+                                })
+                                .then(res => console.log(res.data));
+                            setEntries({ ...entries2, data });
+                        }, 600);
+                    })
                 }}
             />
 
