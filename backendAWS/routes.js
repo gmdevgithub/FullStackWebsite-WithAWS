@@ -1,12 +1,27 @@
 module.exports = function(app) 
 {
-    var legacy = require ('../backendAWS/LegacyDBController.js');
 
 
+
+    
+    //var email = require('./Controller/email');
+
+    // Load the MySQL pool connection
+    const pool = require('../backendAWS/AWScontroller.js');
+    // Load the MySQL pool connection
+    const pool2 = require('../backendAWS/Legacycontroller.js');
       
-    app.route('/ListCust.php')
-        .get(legacy.getallparts)
 
-    console.log(legacy.getallparts.caller);
+    
 
+
+    app.route('/getaws')
+    .get(pool.getquotes)
+         
+    app.route('/getlegacy')
+    .get(pool2.getcustomers)
+         
+   
+       
   };
+  
