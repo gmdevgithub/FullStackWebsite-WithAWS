@@ -1,25 +1,24 @@
 
-//Basic imports
+//Basic imports !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import React, {Component, useState, useEffect} from 'react';
 import MaterialTable from 'material-table';
 import { createMuiTheme } from '@material-ui/core/styles';
 import axios from 'axios';
 
-
-
+// Email js !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import emailjs from 'emailjs-com';
 
 
 
-
-//Imports for bootstrap css styling 
+//Imports for bootstrap css styling !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import "bootstrap/dist/css/bootstrap.min.css";
 import Icon from '@material-ui/core/Icon';
 import '../css/homepage.css';
 
-//Custom components 
+//Custom components !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 import Header from "./Header.js";
 import Footer from "./Footer.js";
+
 
 /* Quote Table:
 Customer Fname
@@ -42,14 +41,26 @@ Customer Email */
 
 
 
+
+
+
  
 
-
-
+// This is our   " main ()  "   function lolllllllll  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const SalesDash = (props) => {
 
+
+
+
+
+    // No idea what  this does 
     const { useState } = React;
 
+
+
+
+
+    // Send email function 
     function sendEmail(e) {
         e.preventDefault();
     
@@ -63,6 +74,9 @@ const SalesDash = (props) => {
 
 
 
+
+
+    // Our first table set of entires 
     const [entries, setEntries] = useState({
         data: [
             {
@@ -80,13 +94,19 @@ const SalesDash = (props) => {
                 email: "",
                 sanctioned: ""
     
-    
-    
+
     
             }
         ]
     });
     
+
+
+
+
+
+
+    // Our first table set of state
     const [state] = React.useState({
         columns: [
             { title: "partnumber", field: "partnumber" },
@@ -103,17 +123,17 @@ const SalesDash = (props) => {
             { title: "email", field: "email" },
             { title: "sanctioned", field: "sanctioned" }
     
-           
-            
-      
-          
-
+        
            
         ]
     });
     
     
-    
+
+
+
+
+    // Our first useEffect ()
     useEffect(() => {
         axios
         .get("http://localhost:8080/getaws")
@@ -154,6 +174,11 @@ const SalesDash = (props) => {
           
 
 
+
+
+
+
+    // for adding stuff to DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [columns, setColumns] = useState([
         {
             title: 'name', field: 'name',
@@ -272,6 +297,11 @@ const SalesDash = (props) => {
     
 
 
+
+
+
+
+    // 2nd table data !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [entries2,setData] = useState({
         data: [
             {
@@ -296,6 +326,11 @@ const SalesDash = (props) => {
         ]
     });
     
+
+
+
+
+    // 2nd table entires !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [state2 ,setEntries2] = React.useState({
         columns: [
             { title: "partnumber", field: "partnumber" },
@@ -323,6 +358,9 @@ const SalesDash = (props) => {
 
 
 
+
+
+    // 2nd use effect 
     useEffect(() => {
         axios
         .get("http://localhost:8080/getaws")
@@ -355,6 +393,14 @@ const SalesDash = (props) => {
     }, []);
 
     
+
+
+
+
+
+
+
+    // Styling stuff !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const theme = createMuiTheme({
         palette: {
           primary: {
@@ -369,15 +415,40 @@ const SalesDash = (props) => {
       });
   
 
+
+
+
+
+
+
+
+    // Return stuff to the browser !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return (
 
          
 
+
+
+
+
+
         <div className="App">
+
+
+        // Header component!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
             <Header/>
 
+
+
+
+
         <div class="salesdash">
+
+
+
+
+        //Top of page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 100 } } />
 
@@ -387,6 +458,10 @@ const SalesDash = (props) => {
             <div class="container-fluid" style={ { margin: 40 } } />
 
             
+
+
+        //Email stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            //Email form 
                 <form className="contact-form" onSubmit={sendEmail}>
                     <input type="hidden" name="contact_number" />
                     <label>Name</label>
@@ -400,6 +475,11 @@ const SalesDash = (props) => {
 
            <div  style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
            
+
+
+
+
+        // Current quotes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
            <MaterialTable 
                style = {{ 
                    color: "#6930c3" , 
@@ -452,6 +532,10 @@ const SalesDash = (props) => {
            </div >
            </div >
 
+
+
+
+
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 100 } } />
             
@@ -459,6 +543,12 @@ const SalesDash = (props) => {
             <div class="salesdash2">
             <div style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
            
+
+
+
+
+
+        // 2nd table for edit ,update, new , and stuff !!!!!!!!!!!!!!!!!!!!!!!!!!!!
             <MaterialTable 
                 style = {{ 
                     color: "white" , 
@@ -501,10 +591,27 @@ const SalesDash = (props) => {
                     },
                    
                     }}
+
+
+
+
+
+
+
+
+                //This is where our crap at the top goes for states and entries 
                 title="Add, Edit, Update, Delete"
                 columns={state2.columns}
                 data={entries2.data}
+
+
+
+
+                
                 editable={{
+
+
+                    //This is where the edit, add , update stuff goes 
                     onRowAdd: newData =>
                         new Promise((resolve, reject) => {
                             setTimeout(() => {
@@ -547,12 +654,21 @@ const SalesDash = (props) => {
          
 
 
+
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 500 } } />
            
         </div>
         </div>
+
+
+
+
+        // Footer page 
         <Footer/>
+
+
+
 
         </div>
         
