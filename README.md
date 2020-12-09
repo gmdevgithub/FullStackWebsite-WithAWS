@@ -1,8 +1,6 @@
 # CSCI467-Team4B
 
 
-
-
 This project uses the MERN stack to develop an ecommerce store with a frontend, backend, and database
 
 ***********************************************************************************************************************************************
@@ -17,7 +15,7 @@ This project uses the MERN stack to develop an ecommerce store with a frontend, 
 
 [VideoForBackend](https://www.youtube.com/watch?v=kJA9rDX7azM)
 
-5: If you're ever majorly confused , in VS code right click, GO TO TYPE DEFINITION and see more. 
+# 5: If you're ever majorly confused , in VS code right click, GO TO TYPE DEFINITION and see more. 
 
 6: Install nodemon and run nodemon app.js if you want it to auto update 
 
@@ -44,6 +42,8 @@ Based on which issue comes up
 4: DO NOT CLOSE EITHER server when testing for full functionality 
 ***
 5: TO CLOSE servers simply type the command control + *C*
+
+# NOTE: Tons of issues we had were because we were not in the correct directory OR because of package lock json. Delete the package lock file and then run the command npm install to fix this issue temporarily. The correct way is given here https://stackoverflow.com/questions/44206782/do-i-commit-the-package-lock-json-file-created-by-npm-5 .
 
 ## Menu
 **Whats the overall picture???**
