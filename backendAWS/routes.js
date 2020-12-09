@@ -15,8 +15,12 @@ module.exports = function(app)
     
 
 
-    app.route('/getaws')
+    app.route('/getquoteaws')
     .get(pool.getquotes)
+    app.route('/getsalesaws')
+    .get(pool.getsalesinfo)
+    app.route('/addaws')
+    .post(pool.postquotes)
          
     app.route('/getlegacy')
     .get(pool2.getcustomers)

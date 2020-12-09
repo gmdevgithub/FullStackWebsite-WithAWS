@@ -46,7 +46,7 @@ Customer Email */
 
  
 
-// This is our   " main ()  "   function lolllllllll  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// This is our   " main ()  "   function  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 const SalesDash = (props) => {
 
 
@@ -74,6 +74,7 @@ const SalesDash = (props) => {
 
 
 
+      
 
 
     // Our first table set of entires 
@@ -136,7 +137,7 @@ const SalesDash = (props) => {
     // Our first useEffect ()
     useEffect(() => {
         axios
-        .get("http://localhost:8080/getaws")
+        .get("http://localhost:8080/getquoteaws")
         .then(response => {
         let data = [];
     response.data.forEach(el => {
@@ -178,128 +179,8 @@ const SalesDash = (props) => {
 
 
 
-    // for adding stuff to DB !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    const [columns, setColumns] = useState([
-        {
-            title: 'name', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'city', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'street', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'contact', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'number', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'price', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'description', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'quote', field: 'quote',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'secretnote', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        {
-            title: 'email', field: 'name',
-            editComponent: props => (
-                <input
-                    style = {{backgroundColor: "white"}}
-                    type="text"
-                    value={props.value}
-                    onChange={e => props.onChange(e.target.value)}
-                />
-            )
-        },
-        
-        
-    ]);
-
-    
-
-
-
-
-
+          
+         
 
     // 2nd table data !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [entries2,setData] = useState({
@@ -333,19 +214,112 @@ const SalesDash = (props) => {
     // 2nd table entires !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const [state2 ,setEntries2] = React.useState({
         columns: [
-            { title: "partnumber", field: "partnumber" },
-            { title: "customernumber", field: "customernumber" },
-            { title: "firstname", field: "firstname" },
-            { title: "city", field: "city" },
-            { title: "street", field: "street" },
-            { title: "contact", field: "contact" },
-            { title: "quote", field: "quote" },
-            { title: "price", field: "price" },
-            { title: "descriptions", field: "descriptions" },
-            { title: "discount", field: "discount" },
-            { title: "secretnote", field: "secretnote" },
-            { title: "email", field: "email" },
-            { title: "sanctioned", field: "sanctioned" }
+            { title: "partnumber", field: "partnumber", 
+            editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )},
+            { title: "customernumber", field: "customernumber" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            ) 
+            },
+            { title: "firstname", field: "firstname" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />) 
+            },
+            { title: "city", field: "city" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "street", field: "street" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "contact", field: "contact"  , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            ) },
+            { title: "quote", field: "quote"  , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            ) },
+            { title: "price", field: "price" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "descriptions", field: "descriptions" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "discount", field: "discount" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "secretnote", field: "secretnote" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "email", field: "email" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            )  },
+            { title: "sanctioned", field: "sanctioned" , editComponent: props => (
+                <input
+                    style = {{backgroundColor: "white"}}
+                    type="text"
+                    value={props.value}
+                    onChange={e => props.onChange(e.target.value)}
+                />
+            ) }
     
            
             
@@ -358,12 +332,12 @@ const SalesDash = (props) => {
 
 
 
-
+    
 
     // 2nd use effect 
     useEffect(() => {
         axios
-        .get("http://localhost:8080/getaws")
+        .get("http://localhost:8080/getquoteaws")
         .then(response => {
         let data = [];
     response.data.forEach(el => {
@@ -400,6 +374,7 @@ const SalesDash = (props) => {
 
 
 
+
     // Styling stuff !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     const theme = createMuiTheme({
         palette: {
@@ -422,6 +397,174 @@ const SalesDash = (props) => {
 
 
 
+
+    
+    // Our first table set of entires 
+    const [entries3, setEntries3] = useState({
+        data: [
+            {
+                id: "",
+                name: "",
+                city: "",
+                street: "",
+                contact: "",
+               
+    
+
+    
+            }
+        ]
+    });
+    
+
+
+
+
+
+
+    // Our first table set of state
+    const [state3] = React.useState({
+        columns: [
+            { title: "id", field: "id" },
+            { title: "name", field: "name" },
+            { title: "city", field: "city" },
+            { title: "street", field: "street" },
+            { title: "contact", field: "contact" },
+            
+        
+           
+        ]
+    });
+    
+    
+
+
+
+
+    // Our first useEffect ()
+    useEffect(() => {
+        axios
+        .get("http://localhost:8080/getlegacy")
+        .then(response => {
+        let data = [];
+    response.data.forEach(el => {
+        data.push({
+            id: el.id,
+            name: el.name,
+            city: el.city,
+            street: el.street,
+            contact: el.contact,
+            
+            
+           
+        });
+    });
+    setEntries3({ data: data });
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+    }, []);
+
+
+
+
+
+
+     // Our first table set of entires 
+     const [entries4, setEntries4] = useState({
+        data: [
+            {
+                quoteid: "",
+                ordernum: "",
+                associate: "",
+                custid: "",
+                amount: "",
+                finaldiscount: "",
+                total: "",
+               
+    
+
+    
+            }
+        ]
+    });
+    
+
+
+
+
+
+
+    // Our first table set of state
+    const [state4] = React.useState({
+        columns: [
+            { title: "quoteid", field: "quoteid" },
+            { title: "ordernum", field: "ordernum" },
+            { title: "associate", field: "associate" },
+            { title: "custid", field: "custid" },
+            { title: "amount", field: "amount" },
+            { title: "finaldiscount", field: "finaldiscount" },
+            { title: "total", field: "total" },
+            
+        
+           
+        ]
+    });
+    
+    
+
+
+
+
+    // Our first useEffect ()
+    useEffect(() => {
+        axios
+        .get("http://localhost:8080/getlegacy")
+        .then(response => {
+        let data = [];
+    response.data.forEach(el => {
+        data.push({
+            quoteid: el.quoteid,
+            ordernum: el.ordernum,
+            associate: el.associate,
+            custid: el.custid,
+            amount: el.amount,
+            finaldiscount: el.finaldiscount,
+            total: el.total
+            
+
+
+         
+           
+        });
+    });
+    setEntries4({ data: data });
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+    }, []);
+
+
+
+
+
+     // Send email function 
+     function sendEmail(e) {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_iqx2obn', 'template_ig9u9mb', e.target, 'user_tsBdXLyxdJz05kQ2EPswb')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+      }
+
+
+
+
     // Return stuff to the browser !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     return (
 
@@ -435,7 +578,7 @@ const SalesDash = (props) => {
         <div className="App">
 
 
-        // Header component!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+      
 
             <Header/>
 
@@ -448,7 +591,7 @@ const SalesDash = (props) => {
 
 
 
-        //Top of page !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+       
             {/* Spacer  */}
             <div class="container-fluid" style={ { margin: 100 } } />
 
@@ -459,9 +602,76 @@ const SalesDash = (props) => {
 
             
 
+           
 
-        //Email stuff!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-            //Email form 
+
+           <div  style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
+           
+
+
+
+
+        
+           <MaterialTable 
+               style = {{ 
+                   color: "#6930c3" , 
+                   backgroundColor: "black", 
+                   borderColor: "teal",
+                   border: "solid",
+                   height: '500px',
+                   
+                  
+                   
+                }}
+                options={{
+                   actionsColumnIndex: -1,
+                   actionsCellStyle:
+                   {
+                       color: "#72EFDD",
+                       backgroundColor: "black"
+
+                   },
+                   headerStyle:
+                   {
+                    backgroundColor:'black',
+                    color: '#72EFDD',
+
+                   },
+                   rowStyle: 
+                   {
+                   backgroundColor: 'black',
+                   
+                   
+                   },
+                   searchFieldStyle: 
+                   {
+                   
+                  
+                   backgroundColor: '#72EFDD',
+                   border: "solid",
+                   borderColor: "#6930c3",
+                   
+                   },
+                  
+                   }}
+               title="Current Customers"
+               columns={state3.columns}
+               data={entries3.data}
+               
+               
+           />
+
+           </div >
+
+          
+
+            {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 300 } } />
+
+
+
+      
+           
                 <form className="contact-form" onSubmit={sendEmail}>
                     <input type="hidden" name="contact_number" />
                     <label>Name</label>
@@ -470,8 +680,16 @@ const SalesDash = (props) => {
                     <input type="email" name="user_email" />
                     <label>Message</label>
                     <textarea name="message" />
+
+
+
+
                     <input type="submit" value="Send" />
                 </form>
+
+
+
+
 
            <div  style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
            
@@ -479,7 +697,7 @@ const SalesDash = (props) => {
 
 
 
-        // Current quotes !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
            <MaterialTable 
                style = {{ 
                    color: "#6930c3" , 
@@ -541,6 +759,7 @@ const SalesDash = (props) => {
             
 
             <div class="salesdash2">
+                
             <div style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
            
 
@@ -548,7 +767,7 @@ const SalesDash = (props) => {
 
 
 
-        // 2nd table for edit ,update, new , and stuff !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
             <MaterialTable 
                 style = {{ 
                     color: "white" , 
@@ -607,19 +826,19 @@ const SalesDash = (props) => {
 
 
 
-                
+
                 editable={{
 
 
                     //This is where the edit, add , update stuff goes 
-                    onRowAdd: newData =>
-                        new Promise((resolve, reject) => {
+                    onRowAdd: (newData) =>
+                        new Promise(resolve => {
                             setTimeout(() => {
-                                setData([...entries2.data, newData]);
-                               
-
                                 resolve();
-                            }, 1000)
+                                const data = [...newData.data];
+                                data.push(newData)
+                                setData({ ...state, data });
+                            }, 600);
                         }),
                     onRowUpdate: (newData, oldData) =>
                         new Promise((resolve, reject) => {
@@ -639,7 +858,7 @@ const SalesDash = (props) => {
                             const data = [...entries2.data];
                             entries2.data.splice(entries2.data.indexOf(oldData), 1);
                             axios
-                                .delete("http://localhost:8080/getaws", {
+                                .delete("http://localhost:8080/getquoteaws", {
                                     params: {
                                         partnumber: entries2.data[0].partnumber
                                     }
@@ -655,16 +874,82 @@ const SalesDash = (props) => {
 
 
 
-            {/* Spacer  */}
-            <div class="container-fluid" style={ { margin: 500 } } />
+           
            
         </div>
+
+                
+            {/* Spacer  */}
+        <div class="container-fluid" style={ { margin: 100 } } />
+
+        <div  style={{ marginLeft: "125px", maxWidth: "80%", alignContent: "center" }}>
+           
+
+
+
+
+        
+           <MaterialTable 
+               style = {{ 
+                   color: "#6930c3" , 
+                   backgroundColor: "black", 
+                   borderColor: "teal",
+                   border: "solid",
+                   height: '500px',
+                   
+                  
+                   
+                }}
+                options={{
+                   actionsColumnIndex: -1,
+                   actionsCellStyle:
+                   {
+                       color: "#72EFDD",
+                       backgroundColor: "black"
+
+                   },
+                   headerStyle:
+                   {
+                    backgroundColor:'black',
+                    color: '#72EFDD',
+
+                   },
+                   rowStyle: 
+                   {
+                   backgroundColor: 'black',
+                   
+                   
+                   },
+                   searchFieldStyle: 
+                   {
+                   
+                  
+                   backgroundColor: '#72EFDD',
+                   border: "solid",
+                   borderColor: "#6930c3",
+                   
+                   },
+                  
+                   }}
+               title="Current Purchase Orders"
+               columns={state4.columns}
+               data={entries4.data}
+               
+               
+           />
+
+           </div >
+
+
+                    {/* Spacer  */}
+            <div class="container-fluid" style={ { margin: 500 } } />
+
         </div>
 
 
 
 
-        // Footer page 
+        
         <Footer/>
 
 

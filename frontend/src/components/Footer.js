@@ -22,8 +22,7 @@ const Footer = () => {
             color: "#80FFDB" ,
             textAlign: "center"
             }}>
-          Created by Team4B find this project on github at 
-          https://github.com/codingcodewhilegoofin/CSCI467-Team4B
+          Created by Team4B 
         </Typography>
        
 

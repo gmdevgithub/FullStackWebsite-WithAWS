@@ -155,6 +155,6 @@ app.get( '/getaws' , ( req , res ) => // This is an arrow function
 // http://localhost:5000/
 app.listen(port, (err) =>{
     if(err){
-    return console.log('shitttttttttt something wrong');}
-    console.log("we live from from port:"+port);
+    return console.log('error');}
+    console.log("using port:"+port);
 });
