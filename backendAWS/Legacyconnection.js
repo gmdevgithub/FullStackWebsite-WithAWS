@@ -31,8 +31,29 @@ connection.connect(function(err){
 
 
 
+
+/* let statment = 'SELECT * FROM customers';
+
+
+connection.query(statment, (err, results, fields) => 
+{
+    if (err) 
+    {
+        return console.error(err.message);
+    }
+
+    console.log(results[0])
+
+});
+ */
+
+/* 
 let statment = 'SELECT * FROM customers';
 console.log(" Query is " + statment);
+
+let statment2 = 'SELECT * FROM `parts` ORDER BY `number` ASC ';
+console.log(" Query is " + statment);
+
 
 
 
@@ -44,11 +65,33 @@ connection.query(statment, (err, results, fields) =>
         return console.error(err.message);
     }
 
-    console.log(results)
+    console.log(results[0])
+
+});
+
+
+connection.query(statment2, (err, results, fields) => 
+{
+    if (err) 
+    {
+        return console.error(err.message);
+    }
+
+    console.log(results[0])
 
 });
     
+ */
 
 
 
+
+
+// Create a MySQL pool
+///const pool = mysql.createPool(connection);
+
+// Export the pool
 module.exports = connection;
+
+
+//connection.end();

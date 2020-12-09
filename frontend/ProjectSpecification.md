@@ -36,15 +36,8 @@ A sales associate is presented with a custom quote tracking program which can be
 
 
 
-(Form) ( FRONT END ) 
-Login
-
-
-
 
 EXTRACT ( PULL FROM THE DB HE GAVE US FOR CUSTOMERS / PARTS ) ( BACK END )
-
-
 
 
 

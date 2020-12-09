@@ -22,7 +22,7 @@ const Footer = () => {
             color: "#80FFDB" ,
             textAlign: "center"
             }}>
-          Buy our cracks
+          Created by Team4B 
         </Typography>
        
 

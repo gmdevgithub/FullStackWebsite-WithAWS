@@ -1,0 +1,20 @@
+.homepage {
+	background-image: url( https://media.giphy.com/media/VeMfDj4KctWsUEfs1L/giphy.gif);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 20%;
+
+}
+.salesdash {
+	background-image: url( https://media.giphy.com/media/3o85xqOFGmTBiOADbW/giphy.gif);
+    background-repeat: no-repeat;
+    background-position-x: right;
+
+   
+
+}
+.salesdash2 {
+	background-image: url( https://media.giphy.com/media/3o85xqOFGmTBiOADbW/giphy.gif);
+    background-repeat: no-repeat;
+    background-position-x: left;
+}
